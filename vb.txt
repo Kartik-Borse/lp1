@@ -1,0 +1,47 @@
+VB code:
+Public Class Form1
+Public Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles
+Button1.Click
+TextBox3.Text = kartikdll.add(Val(TextBox1.Text), Val(TextBox2.Text))
+End Sub
+Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles
+Button2.Click
+TextBox3.Text = kartikdll.sub1(Val(TextBox1.Text), Val(TextBox2.Text))
+End Sub
+Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles
+Button3.Click
+TextBox3.Text = kartikdll.mul(Val(TextBox1.Text), Val(TextBox2.Text))
+End Sub
+Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles
+Button4.Click
+TextBox3.Text = kartikdll.div(Val(TextBox1.Text), Val(TextBox2.Text))
+End Sub
+Private Sub Button5_Click(sender As System.Object, e As System.EventArgs) Handles
+Button5.Click
+Me.Close()
+End Sub
+End Class
+DLL code :
+Public Module kartikdll
+Public Function add(ByVal n1 As Integer, ByVal n2 As Integer)
+Dim RESULT As Integer
+RESULT = n1 + n2
+Return (RESULT)
+End Function
+Public Function sub1(ByVal n1 As Integer, ByVal n2 As Integer)
+Dim RESULT As Integer
+RESULT = n1 - n2
+Return (RESULT)
+
+End Function
+Public Function mul(ByVal n1 As Integer, ByVal n2 As Integer)
+Dim RESULT As Integer
+RESULT = n1 * n2
+Return (RESULT)
+End Function
+Public Function div(ByVal n1 As Integer, ByVal n2 As Integer)
+Dim RESULT As Integer
+RESULT = n1 / n2
+Return (RESULT)
+End Function
+End Module
